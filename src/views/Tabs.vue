@@ -34,6 +34,6 @@ export default {
       square, 
       triangle,
     }
-  }
+  },
 }
 </script>
