@@ -23,16 +23,22 @@
         <!-- Need props handlers on the component -->
         <!-- <script>export default { -->
         <!-- props: [], -->
-        <tab-collection 
+        <!-- Note: kebab case on the caller, camel case on the handler -->
+        <!-- <tab-collection 
           message="New Tab"
           tabLabel="Tab Label"
-          href="/tabs/tab4"
-          icon="square"
+          href="/tabs/tab3"
+          sent-icon="square"
           name="Manuel Lorenz"
           phone-number="01234 78992"
           email-address="doug@dougfranklin.com"
-          ></tab-collection>
-        
+          ></tab-collection> -->
+          <TabCollection message="New Tab" test-prop="Test">
+            <ion-tab-button tab="tab4" href="/tabs/tab4">
+            <ion-icon :icon="square" />
+            <ion-label>Tab 4</ion-label>
+            </ion-tab-button>
+          </TabCollection>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -48,7 +54,8 @@ export default {
   name: 'Tabs',
   components: { 
     TabCollection,
-    IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
+    IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage 
+  },
   setup() {
     return {
       ellipse, 
