@@ -19,7 +19,19 @@
         </ion-tab-button>
 
         <!-- {{ 4 }} -->
-        <tab-collection></tab-collection>
+        <!-- Need props -->
+        <!-- Need props handlers on the component -->
+        <!-- <script>export default { -->
+        <!-- props: [], -->
+        <tab-collection 
+          message="New Tab"
+          tabLabel="Tab Label"
+          href="/tabs/tab4"
+          icon="square"
+          name="Manuel Lorenz"
+          phone-number="01234 78992"
+          email-address="doug@dougfranklin.com"
+          ></tab-collection>
         
       </ion-tab-bar>
     </ion-tabs>

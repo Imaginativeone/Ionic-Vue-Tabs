@@ -3,8 +3,6 @@ import { RouteRecordRaw } from 'vue-router';
 
 import Tabs from '../views/Tabs.vue'
 
-import TabCollection from '../views/TabCollection.vue';
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
