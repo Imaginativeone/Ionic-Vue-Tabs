@@ -1,10 +1,11 @@
 <template>
-  <!-- <div>{{ message }}</div> -->
+  <div @click="showProps">{{ message }}</div>
+  <!-- <div @click="showProps">{{ iMessage }}</div> -->
   <!-- <div>{{ testProp }}</div> -->
-  <div>
+  <div @click="showProps">
     <!-- <ion-label>{{ message }}</ion-label> -->
-    <slot></slot>
   </div>
+  <slot></slot>
 </template>
 
 // TODO: Make this into a reusable component
@@ -13,9 +14,21 @@
 
 export default {
   name: 'TabCollection',
-  props: [
-    'message', 
-    'testProp'
-  ]
+  props: {
+    message: String,
+    testProp: String,
+    tab: String
+  },
+  data() {
+    return {
+      iMessage: 1
+    }
+  },
+  methods: {
+    showProps() {
+      console.log('showProps()');
+      // console.log(this);
+    }
+  }
 }
 </script>

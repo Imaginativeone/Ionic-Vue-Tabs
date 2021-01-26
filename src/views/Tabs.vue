@@ -34,10 +34,11 @@
           email-address="doug@dougfranklin.com"
           ></tab-collection> -->
           <TabCollection message="New Tab" test-prop="Test">
-            <ion-tab-button tab="tab4" href="/tabs/tab4">
-            <ion-icon :icon="square" />
-            <ion-label>Tab 4</ion-label>
-            </ion-tab-button>
+            <IonTabButton tab="tab3" href="/tabs/tab3">
+              <!-- <ion-tab-button> -->
+              <ion-icon icon="square" />
+              <ion-label>Tab 3</ion-label>
+            </IonTabButton>
           </TabCollection>
       </ion-tab-bar>
     </ion-tabs>
