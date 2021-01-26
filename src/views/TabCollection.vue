@@ -1,16 +1,20 @@
 <template>
-  <div @click="showProps">{{ message }}</div>
+  <!-- <div @click="showProps">{{ message }}</div> -->
   <!-- <div @click="showProps">{{ iMessage }}</div> -->
   <!-- <div>{{ testProp }}</div> -->
-  <div @click="showProps">
+  <!-- <div @click="showProps"> -->
     <!-- <ion-label>{{ message }}</ion-label> -->
-  </div>
-  <slot></slot>
+  <!-- </div> -->
+  <ion-tab-button tab="tab3" href="/tabs/tab3">
+    <ion-icon :icon="square" />
+    <ion-label>{{ message }}</ion-label>
+  </ion-tab-button>
 </template>
 
 // TODO: Make this into a reusable component
 // TODO: Review the concept of Data Binding
 <script lang="ts">
+import { ellipse, square, triangle } from 'ionicons/icons';
 
 export default {
   name: 'TabCollection',
@@ -29,6 +33,13 @@ export default {
       console.log('showProps()');
       // console.log(this);
     }
-  }
+  },
+    setup() {
+    return {
+      ellipse, 
+      square, 
+      triangle,
+    }
+  },
 }
 </script>
